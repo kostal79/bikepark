@@ -1,0 +1,18 @@
+.footer {
+    padding: 60px 40px 40px;
+    height: 490px;
+    background-color: #272934;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    column-gap: 20px;
+}
+
+.footer a {
+    color: inherit;
+}
+
+.footer a:active {
+    opacity: .8;
+}

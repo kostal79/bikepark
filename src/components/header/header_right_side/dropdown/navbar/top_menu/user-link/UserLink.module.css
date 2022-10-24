@@ -1,0 +1,33 @@
+.text {
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+
+span {
+    color:rgba(41, 127, 255, 1);
+}
+
+.exit {
+    display: none;
+    /* display: flex; */
+}
+
+.text .enter span:hover, .text .exit span:hover {
+    opacity: .8;
+}
+
+.exit::before {
+    display: block;
+    content: '';
+    height: 21px;
+    width: 2px;
+    margin-right: 15px;
+    background-color: rgba(221, 227, 235, 1);
+    cursor:context-menu;
+}

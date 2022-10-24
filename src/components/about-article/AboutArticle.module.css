@@ -1,0 +1,21 @@
+.article {
+    padding: 30px 20px 24px 20px;
+    background-color: rgba(242, 244, 247, 1);
+    border-radius: 20px;
+    color: rgba(20, 35, 61, 1);
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 32px;
+    padding-bottom: 32px;
+}
+
+
+.text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    padding-bottom: 20px;
+}

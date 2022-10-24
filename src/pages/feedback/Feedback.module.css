@@ -1,0 +1,13 @@
+.feedback {
+    display: flex;
+    flex-direction: column;
+    row-gap: 29px;
+    background-color: rgba(242, 244, 247, 1);
+    border-radius: 20px;
+    padding: 27px 20px 35px 20px;
+}
+
+.title {
+    font-size: 20px;
+    line-height: 22px;
+}
