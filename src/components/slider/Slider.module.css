@@ -1,0 +1,11 @@
+.slider {
+    background-color: rgba(242, 244, 247, 1);
+    border-radius: 20px;
+    padding: 27px 20px 35px 20px;
+    overflow: hidden;
+    height: 430px;
+}
+
+.title {
+    padding-bottom: 30px;
+}

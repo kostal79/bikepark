@@ -1,0 +1,13 @@
+.sliderButton {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(171, 177, 197, 1);
+    border: none;
+    cursor: pointer;
+    transition:all .5s;
+}
+
+.sliderButton-active {
+    background-color: rgba(41, 127, 255, 1);
+}

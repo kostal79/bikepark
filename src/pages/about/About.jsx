@@ -1,13 +1,14 @@
 import React from 'react'
 import AboutArticle from '../../components/about-article/AboutArticle'
-import Feedback from '../feedback/Feedback';
+import Slider from '../../components/slider/Slider';
 import classes from './About.module.css'
 
-const About = () => {
+const About = (props) => {
+    const commentsList = props.commentsList;
     return (
         <div className={classes.container}>
-           <AboutArticle />
-           <Feedback />
+            <AboutArticle />
+            <Slider commentsList={commentsList} />
         </div>
     );
 };
