@@ -8,7 +8,11 @@ const SliderList = (props) => {
     let loadList = [];
 
     for (let i = 0; i < quantity; i++) {
-        loadList.push(<Slide commentText={commentsList[i].value} commenAuthor={commentsList[i].author}/>)
+        try {
+            loadList.push(<Slide commentText={commentsList[i].value} commenAuthor={commentsList[i].author} key={commentsList[i].id} />)
+        } catch(error) {
+            loadList.push(<Slide commentText='no comment' commenAuthor='' key={Date.no} />)
+        }
     }
     return (
         <div className={classes.list}>
