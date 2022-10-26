@@ -1,11 +1,50 @@
 .slider {
+    display: flex;
+    flex-direction: column;
     background-color: rgba(242, 244, 247, 1);
     border-radius: 20px;
     padding: 27px 20px 35px 20px;
     overflow: hidden;
-    height: 430px;
+    align-items: center;
 }
 
 .title {
     padding-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 130px;
+    padding-top: 25px;
+    padding-bottom: 35px;
+}
+
+@media screen and (max-width: 768px) {
+    .tab {
+        display: none;
+    }
+
+    .desc {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .desc {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .mob {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1241px) {
+    .tab {
+        display: none;
+    }
 }

@@ -3,7 +3,7 @@ import SliderButton from '../../../UI/slider-buttons/SliderButton';
 import classes from './SliderMob.module.css'
 
 const SliderMob = (props) => {
-
+    
     const commentsList = props.commentsList;
     let [currentComment, setCurrentComment] = useState(commentsList[0].value);
     let [currentAuthor, setCurrentAuthor] = useState(commentsList[0].author);
