@@ -6,7 +6,7 @@ import ArticlesImage from '../../UI/my-image/ArticlesImage';
 
 const AboutArticle = () => {
     return (
-        <article className={classes.article}>
+        <article className={classes.container}>
             <section className={classes.section}>
                 <h1 className={classes.title}>О нас</h1>
                 <p className={classes.text}>Товарищи! постоянный количественный рост и сфера нашей активности
