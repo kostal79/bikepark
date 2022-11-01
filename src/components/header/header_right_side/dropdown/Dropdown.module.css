@@ -62,4 +62,5 @@
 .dropdown-active .menu {
     left: 0;
     transition: .5s;
+    z-index: 1;
 }
