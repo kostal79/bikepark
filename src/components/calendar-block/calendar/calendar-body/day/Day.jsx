@@ -28,7 +28,7 @@ const Day = (props) => {
                 setClassname(classes.activeDateFinish)
             } else if (periodStart && periodFinish && (item.valueOf() > periodStart) && (item.valueOf() < periodFinish)) {
                 setClassname(classes.activePeriod)
-            } else if (item.getMonth() !== currentMonth) { 
+            } else if (item.getMonth() !== currentMonth || item.valueOf() < Date.now() - 86400000) { 
                 setClassname(classes.disabled)
             } else {
                 setClassname(classes.day)

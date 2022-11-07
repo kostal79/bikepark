@@ -1,0 +1,15 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 30px 20px 25px 20px;
+    width: 100%;
+    background-color: rgba(242, 244, 247, 1);
+    border-radius: 20px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 600;
+    color: rgba(20, 35, 61, 1);
+    padding-bottom: 25px;
+}

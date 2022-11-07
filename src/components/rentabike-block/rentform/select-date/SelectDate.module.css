@@ -1,0 +1,78 @@
+.wrapper {
+    padding-top: 23px;
+}
+
+.title {
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(171, 177, 197, 1)
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 14px 20px 20px;
+    height: 60px;
+    border: 1px solid rgba(221, 227, 235, 1);
+    border-radius: 15px;
+    background-color:rgba(255, 255, 255, 1);
+    width: 100%;
+}
+
+.button {
+    background-color:transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.text {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(20, 35, 61, 1);
+}
+
+.calendarActive {
+
+    display: block;
+
+}
+
+.calendarInactive {
+    display: none;
+}
+
+
+
+/* .select {
+
+    appearance: none; */
+
+    /* background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    outline: none;
+  }
+
+  .select {
+    padding: 20px 14px 20px 20px;
+    height: 60px;
+    border: 1px solid rgba(221, 227, 235, 1);
+    border-radius: 15px;
+    background-color:rgba(255, 255, 255, 1);
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .select::after {
+    content: "b";
+    width: 20px;
+    height: 20px;
+  } */

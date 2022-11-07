@@ -1,0 +1,12 @@
+.calendarActive {
+    position: absolute;
+    z-index: 100;
+    display: block;
+
+}
+
+.calendarInactive {
+    display: none;
+}
+
+

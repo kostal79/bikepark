@@ -1,0 +1,77 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    height: 89px;
+
+}
+
+.third {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 7px 15px;
+    position: absolute;
+    left: 200px;
+    background-color: rgba(165, 199, 250, 1);
+    border-radius: 10px 10px 0px 10px;
+    min-width: 100px;
+    height: 89px;
+    z-index: 3;
+}
+
+.second {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 7px 15px;
+    position: relative;
+    min-width: 130px;
+    left: -40px;
+    background-color: rgba(185, 213, 255, 1);
+    border-radius: 10px 0 0 10px;
+    z-index: 2;
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 7px 15px;
+    position: relative;
+    min-width: 140px;
+    background-color: rgba(215, 230, 255, 1);
+    border-radius: 10px 0 0 10px;
+    z-index: 1;
+}
+
+.imageHelmet {
+    width: 76px;
+    height: 49px;
+}
+
+.imageFlaslight {
+    margin-left: 5px;
+    width: 59px;
+    height: 57px;
+}
+
+.imageLock {
+    margin-left: 5px;
+    width: 58px;
+    height: 57px;
+}
+
+.figcaption {
+    padding: 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(41, 127, 255, 1);
+}
+
+.figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

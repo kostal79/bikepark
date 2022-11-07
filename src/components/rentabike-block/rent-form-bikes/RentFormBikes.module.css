@@ -1,0 +1,42 @@
+.wrapper {
+   position: relative;;
+
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    top: -5px;
+    background-color: rgba(242, 244, 247, 1);
+    border-radius: 20px;
+    padding: 50px 20px 140px 20px;
+    width: 100%;
+    max-width: fit-content;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+}
+
+.head {
+    padding: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(171, 177, 197, 1);
+}
+
+.button{
+    width: 100%;
+    position: absolute;
+    top: 320px;
+}

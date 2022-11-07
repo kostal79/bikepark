@@ -1,11 +1,11 @@
 import React from 'react'
-import CalendarBlock from '../../components/calendar-block/CalendarBlock';
+import RentabikeBlock from '../../components/rentabike-block/RentabikeBlock';
 
 
 const Home = () => {
     return (
         <>
-            <CalendarBlock />
+            <RentabikeBlock />
         </>
     );
 };

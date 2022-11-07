@@ -1,0 +1,59 @@
+.wrapper {
+
+    padding-top: 23px;
+}
+
+.title {
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(171, 177, 197, 1)
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 14px 20px 20px;
+    height: 60px;
+    border: 1px solid rgba(221, 227, 235, 1);
+    border-radius: 15px;
+    background-color:rgba(255, 255, 255, 1);
+    width: 100%;
+}
+
+.button {
+    background-color:transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.text {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(20, 35, 61, 1);
+    cursor: pointer;
+}
+
+.selectionActive {
+    position: absolute;
+    left: 0;
+    top: 43px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 100%;
+    padding: 20px 14px 20px 20px;
+    background-color: #fff;
+    border: 1px solid rgba(221, 227, 235, 1);
+    border-top: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    list-style: none;
+    z-index: 100;
+
+}
+
+.selectionInactive {
+    display: none;
+}
