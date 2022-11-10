@@ -1,16 +1,20 @@
 import React, { useState } from 'react'
 import './RentType.css'
+import Store from '../../../../store/Store'
 
 const RentType = () => {
-    let [type, setType] = useState('for days')
+
+    let [type, setType] = useState(Store.rentType.type)
 
 
     function handleType(event) {
         if (type === 'for days') {
-            setType('for hours')
+            setType('for hours');
+            Store.rentType.type = 'for 2 hours'
 
         } else if (type === 'for hours') {
             setType('for days')
+            Store.rentType.type = 'for days'
         }
     }
 

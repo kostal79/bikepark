@@ -1,5 +1,5 @@
 .wrapper {
-   position: relative;;
+   position: relative;
 
 }
 
@@ -15,6 +15,7 @@
     width: 100%;
     max-width: fit-content;
     overflow-x: hidden;
+    overflow-y: visible;
     scroll-behavior: smooth;
 
 }
