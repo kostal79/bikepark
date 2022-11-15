@@ -1,0 +1,21 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color:rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    color:  rgba(41, 127, 255, 1);
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 1px solid  rgba(41, 127, 255, 1);
+}
+
+.button:active {
+    opacity: .8;
+}

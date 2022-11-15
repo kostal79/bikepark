@@ -1,0 +1,53 @@
+.container {
+    padding: 15px 20px 20px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(171, 177, 197, 1);
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.title .size {
+    font-weight: 800;
+}
+
+.text {
+    margin-bottom: 10px;
+    line-height: 22px;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .showFreeDate {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(41, 127, 255, 1);
+}
+
+.footer .disactiveButton {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid rgba(171, 177, 197, 1);
+    border-radius: 10px;
+    text-transform: uppercase;
+}

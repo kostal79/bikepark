@@ -31,7 +31,7 @@ const RentFormBikes = (props) => {
         <BikesTypes {...props} />
       </div>
       <div className={classes.button}>
-        <FatButton text={"найти"} onClick={props.serchBike} />
+        <FatButton text={"найти"} onClick={props.handleRender} />
       </div>
     </div>
   );

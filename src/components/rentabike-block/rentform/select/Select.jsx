@@ -1,23 +1,24 @@
 import React from "react";
 import classes from "./Select.module.css";
+import SelectWrapper from "./SelectWrapper";
 
-const Select = (props) => {
-  const title = props.title;
-  const optionList = props.optionList;
-  const handleSelect = props.handleSelect;
-  const handlePlaceholder = props.handlePlaceholder;
-  const placeholder = props.placeholder;
-  const selectIsActive = props.selectIsActive;
-
+const Select = ({
+  title,
+  optionList,
+  handleSelect,
+  handlePlaceholder,
+  placeholder,
+  selectIsActive,
+}) => {
   function getOptions(arr) {
     let result = arr.map((item) => (
       <li
         className={classes.text}
-        key={item.value}
-        value={item.value}
+        key={item.value || item}
+        value={item.value || item}
         onClick={handlePlaceholder}
       >
-        {item.text}
+        {item.text || item}
       </li>
     ));
     return result;
@@ -59,4 +60,4 @@ const Select = (props) => {
   );
 };
 
-export default Select;
+export default SelectWrapper(Select);

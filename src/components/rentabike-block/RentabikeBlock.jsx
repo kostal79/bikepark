@@ -7,7 +7,7 @@ import Rentform from "./rentform/Rentform";
 import Store from "../../store/Store";
 import BikeType from "./rent-form-bikes/bikes-types/bike-type/BikeType";
 
-const RentabikeBlock = () => {
+const RentabikeBlock = (props) => {
   let [calendarIsActive, setCalendarIsActive] = useState(false);
 
   function showCalendar() {
@@ -19,8 +19,6 @@ const RentabikeBlock = () => {
   let [timeStart, setTimeStart] = useState(0);
   let [timeFinish, setTimeFinish] = useState(0);
   let [clicked, setClick] = useState(false);
-  let [selectIsActive, setSelectIsActive] = useState(false);
-  let [placeholder, setPlaceholder] = useState(Store.delivery.type);
   const currentDate = new Date();
 
   //Date setting
@@ -79,24 +77,9 @@ const RentabikeBlock = () => {
     Store.calendar.timeTo = event.target.value;
   }
 
-  //Select delivery
-
-  function handleSelect() {
-    setSelectIsActive(!selectIsActive);
-  }
-
-  function handlePlaceholder(event) {
-    setPlaceholder(event.target.innerText);
-    setSelectIsActive(false);
-  }
 
   //bikes
 
-
-
-  function serchBike() {
-    console.log(Store.selectSettings());
-  }
 
   let typesList = Store.bikeTypesList;
 
@@ -136,10 +119,7 @@ const RentabikeBlock = () => {
           timeFinish={timeFinish}
           handleTimeStart={handleTimeStart}
           handleTimeFinish={handleTimeFinish}
-          handleSelect={handleSelect}
-          handlePlaceholder={handlePlaceholder}
-          placeholder={placeholder}
-          selectIsActive={selectIsActive}
+          placeholder={Store.delivery.type}
           optionList={Store.delivery.optionList}
           showCalendar={showCalendar}
           calendarIsActive={calendarIsActive}
@@ -148,8 +128,8 @@ const RentabikeBlock = () => {
       <Bridge />
       <RentFormBikes
       typesList={typesList}
-      serchBike={serchBike}
       bikeTypeList={bikeTypeList}
+      handleRender={props.handleRender}
       />
     </>
   );

@@ -16,7 +16,7 @@ const Rentform = (props) => {
         date={
           Store.calendar.from
             ? GetDateFromString(`${Store.calendar.from}`)
-            : "Выберите дату"
+            : "Выберите дату и время"
         }
         time={Store.calendar.timeFrom ? Store.calendar.timeFrom : ""}
         action={props.showCalendar}
@@ -26,7 +26,7 @@ const Rentform = (props) => {
         date={
           Store.calendar.to
             ? GetDateFromString(`${Store.calendar.to}`)
-            : "Выберите дату"
+            : "Выберите дату и время"
         }
         time={Store.calendar.timeTo ? Store.calendar.timeTo : ""}
         action={props.showCalendar}
@@ -38,7 +38,7 @@ const Rentform = (props) => {
       >
         <CalendarBlock {...props} />
       </div>
-      <Select {...props} title="Доставка" />
+      <Select {...props} title="Доставка" selection={(value) => Store.delivery.type = value}/>
     </div>
   );
 };

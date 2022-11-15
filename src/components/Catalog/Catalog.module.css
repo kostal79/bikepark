@@ -1,0 +1,12 @@
+.wrapper{
+    position: relative;
+    top: -5px;
+}
+
+.container {
+    position: relative;
+    top: -5px;
+    background-color: rgba(242, 244, 247, 1);
+    border-radius:20px;
+    padding: 15px 20px 30px 20px;
+}

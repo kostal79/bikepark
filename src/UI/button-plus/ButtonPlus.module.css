@@ -7,6 +7,7 @@
     height: 40px;
     border: 1px solid rgba(221, 227, 235, 1) ;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .button:active {
@@ -22,6 +23,7 @@ background-color: rgba(221, 227, 235, .3);
     width: 40px;
     height: 40px;
     background-color: rgba(41, 127, 255, 1);
+    cursor: pointer;
 }
 
 .button_active:active {

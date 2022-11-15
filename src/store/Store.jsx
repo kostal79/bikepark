@@ -1,5 +1,6 @@
 import BikeImage from "../images/bike.png";
 
+
 let Store = {
   calendar: {
     _from: null,
@@ -150,28 +151,134 @@ let Store = {
 
   selectSettings() {
 
-    let dateFrom = new Date(this.calendar.from);
-    let dateTo = new Date(this.calendar.to);
+    let dateFrom = this.calendar.from ? new Date(this.calendar.from) : null;
+    let dateTo = this.calendar.to ? new Date(this.calendar.to): null;
     let timeFrom = this.calendar.timeFrom;
     let timeTo = this.calendar.timeTo;
     function getHours(string) {
-        return string.split(':')[0]
+        return string ? string.split(':')[0] : null;
     }
 
     function getMinutes(string) {
-        return string.split(':')[1]
+        return string ? string.split(':')[1] : null;
     }
-    dateFrom.setHours(getHours(timeFrom), getMinutes(timeFrom));
-    dateTo.setHours(getHours(timeTo), getMinutes(timeTo))
+    dateFrom = dateFrom ? dateFrom.setHours(getHours(timeFrom), getMinutes(timeFrom)) : null;
+    dateTo = dateTo ? dateTo.setHours(getHours(timeTo), getMinutes(timeTo)) : null;
 
     return {
         rentType: this.rentType.type,
         dateFrom,
         dateTo,
         delivery: this.delivery.type,
-        chosenBikeTypes: this.chosenBikeTypes.getChoise(),
+        type: this.chosenBikeTypes.getChoise(),
     }
-  }
+  },
 };
+
+
+let bikesStore = {
+    store : [
+    {
+        brand: {short: 'Sava', full: 'Sava Lone Range 1.0 '},
+        size: 20,
+        type: { type: "carbon", text: "Карбон" },
+        price: 90,
+        imageName: '2dead7dc96259305dd1d2409664af2f8.jpg',
+        id: '2dead7dc96259305dd1d2409664af2f8.jpg',
+        reservedFrom: null,
+        reservedTo: null,
+    },
+
+    {
+        brand: {short: 'Trinx', full: 'Trinx Rapid 2.2'},
+        size: 20,
+        type: { type: "al", text: "Аллюминий" },
+        price: 90,
+        imageName: '6b24834cef01c9c96a7fc3e3b15f64b2.jpg',
+        id: '6b24834cef01c9c96a7fc3e3b15f64b2.jpg',
+        reservedFrom: null,
+        reservedTo: null,
+    },
+    {
+        brand: {short: 'Treck', full: 'Treck Traveller'},
+        size: 21,
+        type: { type: "econom", text: "Городской эконом" },
+        price: 90,
+        imageName: '45ed34e8916aab8015776743837038f2.jpg',
+        id: '45ed34e8916aab8015776743837038f2.jpg',
+        reservedFrom: null,
+        reservedTo: null,
+    },
+
+    {
+        brand: {short: 'Schwinn', full: 'Schwinn Traveller'},
+        size: 19,
+        type: { type: "al", text: "Аллюминий" },
+        price: 90,
+        imageName: '89b1349448935a0b5f4c049983299109.jpg',
+        id: '89b1349448935a0b5f4c049983299109.jpg',
+        reservedFrom: null,
+        reservedTo: null,
+    },
+
+    {
+        brand: {short: 'Schwinn', full: 'Schwinn Traveller'},
+        size: 20,
+        type: { type: "city", text: "Горный/городской" },
+        price: 90,
+        imageName: '321a3eb9e8bbfdb4b1bd533d2d9cdc5f.jpg',
+        id: '321a3eb9e8bbfdb4b1bd533d2d9cdc5f.jpg',
+        reservedFrom: null,
+        reservedTo: null,
+    },
+
+    {
+        brand: {short: 'Schwinn', full: 'Schwinn Traveller'},
+        size: 19,
+        type: { type: "al", text: "Аллюминий" },
+        price: 90,
+        imageName: 'd370d06e4fe282300d20ce4233cf14ed.jpg',
+        id: 'd370d06e4fe282300d20ce4233cf14ed.jpg',
+        reservedFrom: null,
+        reservedTo: null,
+    },
+
+    {
+        brand: {short: 'Trinx', full: 'Trinx 27.5 M116 Elite'},
+        size: 20,
+        type: { type: "al", text: "Аллюминий" },
+        price: 90,
+        imageName: '2457fbfb7420aa3befdc07ffb91ab243.jpg',
+        id: '2457fbfb7420aa3befdc07ffb91ab243.jpg',
+        reservedFrom: new Date(2022, 10, 1),
+        reservedTo: new Date(2022, 11, 31),
+    },
+
+    {
+        brand: {short: 'Trinx', full: 'Trinx 27.5 M116 Elite'},
+        size: 21,
+        type: { type: "al", text: "Аллюминий" },
+        price: 90,
+        imageName: '349f7463eac88c1694bda18e9cf4465c.jpg',
+        id: '349f7463eac88c1694bda18e9cf4465c.jpg',
+        reservedFrom: null,
+        reservedTo: null,
+    },
+  ],
+
+  getAllBrands() {
+    let arrOfBrands = this.store.map((item) => item.brand.short);
+    let set =  new Set(arrOfBrands)
+    return Array.from(set).sort()
+  },
+
+  getAllSizes() {
+    let arrOfSizes = this.store.map((item) => item.size);
+    let set = new Set(arrOfSizes)
+    return Array.from(set).sort((a, b) => a - b)
+  },
+}
+
+export {bikesStore}
 
 export default Store;

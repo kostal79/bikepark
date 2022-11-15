@@ -1,0 +1,36 @@
+.container {
+    padding: 15px 20px 20px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: rgba(171, 177, 197, 1);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.title .size {
+    font-weight: 800;
+}
+
+.text {
+    color: rgba(20, 35, 61, 1);
+    margin-bottom: 10px;
+    line-height: 22px;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgba(41, 127, 255, 1);
+    margin-bottom: 15px;
+}
+
