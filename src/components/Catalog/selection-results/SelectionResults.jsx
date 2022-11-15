@@ -22,10 +22,10 @@ const SelectionResults = (props) => {
         return <CatalogCardDisactive item={item} key={item.id} />;
       }
     });
-    return result;
+    return result = result.length > 0 ? result : "ничего не найдено";
   }
   return (
-    <div className={classes.container}>{renderSelection(props.render)}</div>
+    <div className={classes.container}>{renderSelection(props.filteredSelection)}</div>
   );
 };
 

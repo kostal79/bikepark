@@ -1,11 +1,14 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Catalog from "../../components/Catalog/Catalog";
 import RentabikeBlock from "../../components/rentabike-block/RentabikeBlock";
 import Store, { bikesStore } from "../../store/Store";
 
 const Home = () => {
   let [render, setRender] = useState("");
+  let [filteredSelection, setFilteredSelection] = useState(render);
+  let [brend, setBrend] = useState("все бренды");
+  let [size, setSize] = useState("все размеры");
 
   function handleRender() {
     if (Store.selectSettings().dateFrom && Store.selectSettings().dateTo) {
@@ -19,14 +22,46 @@ const Home = () => {
     }
   }
 
+  useEffect(() => {
+    if (brend !== "все бренды" && size !== "все размеры") {
+      let sortedArray = Array.from(render).filter((item) => {
+        return item.brand.short === brend && item.size === Number(size);
+      });
+      setFilteredSelection(sortedArray);
+    } else if (brend !== "все бренды" && size === "все размеры") {
+      let sortedArray = Array.from(render).filter((item) => {
+        return item.brand.short === brend;
+      });
+      setFilteredSelection(sortedArray);
+    } else if (brend === "все бренды" && size !== "все размеры") {
+      let sortedArray = Array.from(render).filter((item) => {
+        return item.size === Number(size);
+      });
+      setFilteredSelection(sortedArray);
+    } else {
+      setFilteredSelection(Array.from(render));
+    }
+  }, [brend, size, render]);
+
+  function handleBrand(value) {
+    setBrend(value);
+  }
+
+  function handleSize(value) {
+    setSize(value);
+  }
+
   return (
     <>
       <RentabikeBlock handleRender={handleRender} />
+
       <Catalog
         render={render}
+        filteredSelection={filteredSelection}
         selection={Store.selectSettings()}
-        setRender={setRender}
         handleRender={handleRender}
+        handleBrand={handleBrand}
+        handleSize={handleSize}
       />
     </>
   );

@@ -19,7 +19,8 @@ const CatalogCardActive = (props) => {
           borderRadius: "10px",
           marginBottom: "15px",
           backgroundPosition: "bottom",
-          backgroundSize: "cover"
+          backgroundSize: "cover",
+          margin: "0 auto",
         }}
       ></div>
       <p className={classes.text}>{item.type.text} </p>
